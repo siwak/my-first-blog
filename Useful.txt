@@ -1,0 +1,37 @@
+To create a virtual environment (venv):
+   "c:\python34\python -m venv myvenv", der myvenv er navnet på miljøet
+
+To start the environment when you work on it:
+   "myvenv\scripts\activate"
+
+To create a project in our environment:
+   stand on (myvenv): django-admin.py startproject mysite .
+
+To create a database for our project:
+   python manage.py migrate
+
+To start the web server:
+   python manage.py runserver
+
+The website will then be on:
+   http://127.0.0.1:8000/
+
+To create a new app:
+   python manage.py startapp blog
+
+Add the app to djangos setting, setting.py:
+   Add to INSTALLED_APPS
+
+When new models, create migration script:
+   python manage.py makemigrations blog
+
+To apply to the database:
+   python manage.py migrate blog
+
+To use Django admin, register the model in admin.py
+Admin: http://127.0.0.1:8000/admin/
+
+To create a superuser:
+   python manage.py createsuperuser
+
+
