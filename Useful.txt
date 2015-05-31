@@ -34,4 +34,51 @@ Admin: http://127.0.0.1:8000/admin/
 To create a superuser:
    python manage.py createsuperuser
 
+Git repository for the project:
+   git init
+   git config --global user.name "sikrno"
+   git config --global user.email siw_annie@hotmail.com
+
+   .gitignore file tells git which files to ignore
+
+   git status - return changes
+   git add -A .
+   git commit -m "a comment"
+
+Git user account:
+   username: siwak
+   password: AndNur01
+
+PythonAnywhere: (where we host our server)
+   www.pythonanywhere.com
+   username: siwannie
+   password: AndNur01
+   dos-equivalent is "Bash" under consoles
+
+   to pull donw our code from GitHub:
+   git clone https://github.com/siwak/my-first-blog.git
+
+   create a virtualenv:
+      cd my-first-blog
+      virtualenv --python=python3.4 myvenv
+      source myvenv/fin/activate - activates myvenv
+      pip install django whitenoise - whitenoise has to do with static files
+      python manage.py collectstatic
+
+   create the database (as before):
+      python manage.py migrate
+      python manage.py createsuperuser
+
+   publish our web:
+      pythonanywhere - web - add a new web app, choose manual and python3.4
+
+      
+
+
+
+
+
+
+
+
 
