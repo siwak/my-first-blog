@@ -43,7 +43,9 @@ Git repository for the project:
 
    git status - return changes
    git add -A .
+   git status -check...
    git commit -m "a comment"
+   git push
 
 Git user account:
    username: siwak
@@ -61,7 +63,7 @@ PythonAnywhere: (where we host our server)
    create a virtualenv:
       cd my-first-blog
       virtualenv --python=python3.4 myvenv
-      source myvenv/fin/activate - activates myvenv
+      source myvenv/bin/activate - activates myvenv
       pip install django whitenoise - whitenoise has to do with static files
       python manage.py collectstatic
 
@@ -69,8 +71,22 @@ PythonAnywhere: (where we host our server)
       python manage.py migrate
       python manage.py createsuperuser
 
+   pull from git:
+      cd my-first-blog
+      source myvenv/bin/activate
+      git pull
+      python manage.py collectstatic
+
    publish our web:
       pythonanywhere - web - add a new web app, choose manual and python3.4
+
+
+Changes to the models/database:
+   create migration file:
+      python manage.py makemigrations blog
+
+   apply changes:
+      python manage.py migrate blog
 
       
 
